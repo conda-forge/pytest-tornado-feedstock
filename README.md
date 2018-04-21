@@ -16,12 +16,15 @@ asynchronous tornado applications.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pytest-tornado-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytest-tornado-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pytest-tornado-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pytest-tornado-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-tornado/badges/version.svg)](https://anaconda.org/conda-forge/pytest-tornado)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-tornado/badges/downloads.svg)](https://anaconda.org/conda-forge/pytest-tornado)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytest--tornado-green.svg)](https://anaconda.org/conda-forge/pytest-tornado) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytest-tornado.svg)](https://anaconda.org/conda-forge/pytest-tornado) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytest-tornado.svg)](https://anaconda.org/conda-forge/pytest-tornado) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytest-tornado.svg)](https://anaconda.org/conda-forge/pytest-tornado) |
 
 Installing pytest-tornado
 =========================
