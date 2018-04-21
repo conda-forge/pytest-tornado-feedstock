@@ -1,6 +1,6 @@
 {% set name = "pytest-tornado" %}
-{% set version = "0.4.5" %}
-{% set sha256 = "28b772d8dbea3d98da94d6697f739652a373b35123e0ed60af77557c6a2c392c" %}
+{% set version = "0.5.0" %}
+{% set sha256 = "214fc59d06fb81696fce3028b56dff522168ac1cfc784cfc0077b7b1e425b4cd" %}
 
 package:
   name: {{ name|lower }}
