@@ -1,6 +1,7 @@
-{% set name = "pytest-tornado" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "214fc59d06fb81696fce3028b56dff522168ac1cfc784cfc0077b7b1e425b4cd" %}
+# pytest-tornado is no longer maintained, so instead, we build a light fork.
+{% set name = "pytest-tornado5" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "0de5eaaff0af802a6557dd5e27ab8eab94e363c7e07a419237b9032eb8146661" %}
 
 package:
   name: {{ name|lower }}
@@ -14,23 +15,30 @@ source:
 build:
   number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script:  "python -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
+    - pip
     - setuptools
-  run:
-    - python
-    - pytest
-    - tornado
 
 test:
   imports:
-    - pytest_tornado
+    - pytest_tornado5
+
+outputs:
+  - name: {{ name|lower }}
+    requirements:
+      - python
+      - pytest
+      - tornado
+  - name: pytest-tornado
+    requirements:
+      - {{ pin_subpackage(name, exact=True) }}
 
 about:
-  home: https://github.com/eugeniy/pytest-tornado
+  home: https://github.com/vidartf/pytest-tornado
   license: Apache 2.0
   license_family: Apache
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
