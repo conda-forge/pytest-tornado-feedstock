@@ -25,7 +25,7 @@ requirements:
 
 test:
   imports:
-    - pytest_tornado
+    - pytest_tornado5
 
 outputs:
   - name: {{ name|lower }}
