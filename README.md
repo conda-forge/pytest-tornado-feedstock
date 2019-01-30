@@ -20,9 +20,6 @@ asynchronous tornado applications.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pytest-tornado-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pytest-tornado-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/pytest-tornado-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pytest-tornado-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pytest-tornado-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pytest-tornado-feedstock/branch/master)
 
 Current release info
 ====================
