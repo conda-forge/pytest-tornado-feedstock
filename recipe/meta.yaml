@@ -17,12 +17,6 @@ build:
   noarch: python
   script:  "{{ PYTHON }} -m pip install . --no-deps -vv"
 
-requirements:
-  host:
-    - python
-    - pip
-    - setuptools
-
 test:
   imports:
     - pytest_tornado5
@@ -30,9 +24,14 @@ test:
 outputs:
   - name: {{ name|lower }}
     requirements:
-      - python
-      - pytest
-      - tornado
+      host:
+        - python
+        - pip
+        - setuptools
+      run:
+        - python
+        - pytest
+        - tornado
   - name: pytest-tornado
     requirements:
       - {{ pin_subpackage(name, exact=True) }}
