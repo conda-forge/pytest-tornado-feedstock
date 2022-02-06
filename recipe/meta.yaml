@@ -40,15 +40,15 @@ outputs:
         - pytest
         - tornado
   - name: pytest-tornado
-     build:
+    build:
       noarch: python
-   requirements:
-     host:
-       - python
-       - {{ pin_subpackage(name, exact=True) }}
-     run:
-       - python
-       - {{ pin_subpackage(name, exact=True) }}
+    requirements:
+      host:
+        - python
+        - {{ pin_subpackage(name, exact=True) }}
+      run:
+        - python
+        - {{ pin_subpackage(name, exact=True) }}
 
 about:
   home: https://github.com/vidartf/pytest-tornado
