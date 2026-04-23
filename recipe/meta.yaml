@@ -9,21 +9,23 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script:  "python -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pytest_tornado5
 
@@ -33,10 +35,10 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python
+        - python {{ python_min }}
         - pip
       run:
-        - python
+        - python >={{ python_min }}
         - pytest
         - tornado
   - name: pytest-tornado
@@ -44,10 +46,10 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python
+        - python {{ python_min }}
         - {{ pin_subpackage(name, exact=True) }}
       run:
-        - python
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, exact=True) }}
 
 about:
